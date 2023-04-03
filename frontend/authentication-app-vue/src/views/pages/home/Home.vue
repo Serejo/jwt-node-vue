@@ -1,10 +1,16 @@
 <!-- eslint-disable vue/multi-word-component-names -->
 <template>
-  <div class="login">
-    <Login />
+  <div class="home">
+    <Home />
   </div>
 </template>
 
 <script>
-export default {};
+import Home from "@/components/auth-components/home/HomeComponent.vue";
+
+export default {
+  components: {
+    Home,
+  },
+};
 </script>
