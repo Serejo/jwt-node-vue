@@ -1,5 +1,5 @@
 export default {
-  name: "Login",
+  name: "LoginComponent",
   data() {
     return {
       email: "",

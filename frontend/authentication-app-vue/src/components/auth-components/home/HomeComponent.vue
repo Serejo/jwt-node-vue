@@ -4,7 +4,7 @@
   </div>
 </template>
 
-<script scr="./Home.js"></script>
+<script scr="./HomeComponent.js"></script>
 
 <style>
 </style>

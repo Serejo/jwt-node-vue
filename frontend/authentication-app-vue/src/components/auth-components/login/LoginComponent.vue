@@ -4,7 +4,7 @@
   </div>
 </template>
 
-<script scr="./Login.js"></script>
+<script scr="./LoginComponent.js"></script>
 
 <style>
 </style>
