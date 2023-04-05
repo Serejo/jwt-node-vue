@@ -11,6 +11,7 @@ module.exports = {
     quotes: ["error", "double"],
     "import/no-unresolved": "off",
     "vue/no-unused-components": "off",
+    "implicit-arrow-linebreak": "off",
     "no-unresolved": "off",
     "no-empty-function": "off",
     "no-unused-vars": "off",
