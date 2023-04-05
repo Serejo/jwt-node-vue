@@ -2,10 +2,18 @@ export default {
   name: "RegisterComponent",
   data() {
     return {
-      email: "",
-      password: "",
-      password_confirmation: "",
-      errors: [],
+      registerForm: {
+        name: null,
+        email: null,
+        password: null,
+        password_confirmation: null,
+      },
     };
+  },
+
+  methods: {
+    registerSubmitUserForm() {},
+
+    async submitRegisterUser() {},
   },
 };
