@@ -4,7 +4,7 @@
   </div>
 </template>
 
-<script scr="./RegisterComponent.js"></script>
+<script src="./Register.js"></script>
 
 <style>
 </style>

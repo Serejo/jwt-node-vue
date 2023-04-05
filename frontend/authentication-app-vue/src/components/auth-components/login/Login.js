@@ -2,9 +2,13 @@ export default {
   name: "LoginComponent",
   data() {
     return {
-      email: "",
-      password: "",
-      errors: [],
+      loginForm: {
+        email: null,
+        password: null,
+      },
     };
+  },
+  methods: {
+    loginSubmitUserForm() {},
   },
 };

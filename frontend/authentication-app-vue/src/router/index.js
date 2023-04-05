@@ -7,20 +7,17 @@ const routes = [
   {
     path: "/",
     name: "login",
-    component: () =>
-      import("../components/auth-components/login/LoginComponent.vue"),
+    component: () => import("../components/auth-components/login/LoginComponent.vue"),
   },
   {
     path: "/home",
     name: "home",
-    component: () =>
-      import("../components/auth-components/home/HomeComponent.vue"),
+    component: () => import("../components/auth-components/home/HomeComponent.vue"),
   },
   {
     path: "/register",
     name: "register",
-    component: () =>
-      import("../components/auth-components/register/RegisterComponent.vue"),
+    component: () => import("../components/auth-components/register/RegisterComponent.vue"),
   },
 ];
 
