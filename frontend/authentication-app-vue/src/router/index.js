@@ -11,18 +11,21 @@ const routes = [
     path: "/",
     name: "login",
     component: () =>
+      // eslint-disable-next-line implicit-arrow-linebreak
       import("../components/auth-components/login/LoginComponent.vue"),
   },
   {
     path: "/home",
     name: "home",
     component: () =>
+      // eslint-disable-next-line implicit-arrow-linebreak
       import("../components/auth-components/home/HomeComponent.vue"),
   },
   {
     path: "/register",
     name: "register",
     component: () =>
+      // eslint-disable-next-line implicit-arrow-linebreak
       import("../components/auth-components/register/RegisterComponent.vue"),
   },
 ];

@@ -7,28 +7,49 @@
           style="margin-top: 70px; height: auto; padding-top: 100px !important"
           v-on:submit.prevent="loginSubmitUserForm()"
         >
-          <input
-            type="email"
-            id="email"
-            name="email"
-            class="form-control mb-5"
-            placeholder="Digite o seu E-mail"
-            v-model="loginForm.email"
-          />
+          <div class="form-group">
+            <input
+              type="email"
+              id="email"
+              name="email"
+              class="form-control mb-5"
+              placeholder="Digite o seu E-mail"
+              v-model="loginForm.email"
+              :class="{
+                'is-invalid': isSubmitted && $v.loginForm.email.$error,
+              }"
+            />
+            <div
+              v-if="isSubmitted && !$v.loginForm.email.required"
+              class="invalid-feedback"
+            >
+              E-mail é obrigatório
+            </div>
+          </div>
 
-          <input
-            type="password"
-            id="password"
-            name="password"
-            class="form-control mb-5"
-            placeholder="Digite sua senha"
-            v-model="loginForm.password"
-          />
-
-          <p class="center">
-            Não tem uma conta cadastrada?
-            <router-link to="/register">Cadastre-se</router-link>
-          </p>
+          <div class="form-group">
+            <input
+              type="password"
+              id="password"
+              name="password"
+              class="form-control mb-5"
+              placeholder="Digite sua senha"
+              v-model="loginForm.password"
+              :class="{
+                'is-invalid': isSubmitted && $v.loginForm.password.$error,
+              }"
+            />
+            <div
+              v-if="isSubmitted && !$v.loginForm.password.required"
+              class="invalid-feedback"
+            >
+              Password é obrigatório
+            </div>
+            <p class="center">
+              Não tem uma conta cadastrada?
+              <router-link to="/register">Cadastre-se</router-link>
+            </p>
+          </div>
           <center>
             <button
               @click="submitLoginUser"
