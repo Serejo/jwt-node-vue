@@ -24,6 +24,19 @@
             placeholder="Digite sua senha"
             v-model="loginForm.password"
           />
+
+          <p class="center">
+            Não tem uma conta cadastrada?
+            <router-link to="/register">Cadastre-se</router-link>
+          </p>
+          <center>
+            <button
+              @click="submitLoginUser"
+              class="btn btn-primary btn-block w-75 my-4"
+            >
+              Entrar
+            </button>
+          </center>
         </form>
       </div>
     </div>
