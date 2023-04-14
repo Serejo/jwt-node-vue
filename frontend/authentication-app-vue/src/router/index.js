@@ -20,6 +20,7 @@ const routes = [
     component: () =>
       // eslint-disable-next-line implicit-arrow-linebreak
       import("../components/auth-components/home/HomeComponent.vue"),
+    meta: { requiresAuth: true },
   },
   {
     path: "/register",
@@ -41,6 +42,21 @@ router.beforeResolve((to, from, next) => {
     NProgress.start();
   }
   next();
+});
+
+router.beforeEach((to, from, next) => {
+  if (to.matched.some((record) => record.meta.requiresAuth)) {
+    if (localStorage.getItem("jwt") == null) {
+      next({
+        path: "/",
+        params: { nextUrl: to.fullPath },
+      });
+    } else {
+      next();
+    }
+  } else {
+    next();
+  }
 });
 
 router.afterEach((to, from) => {
