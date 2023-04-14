@@ -1,5 +1,7 @@
 # jwt-node-vue
-Projeto simples utilizando mongoDB com autenticaçao JWT
+Projeto simples utilizando mongoDB com autenticaçao JWT 
+
+Esse projeto foi um conjunto de Aulas da Gláucia Lemos chamado Coding Stuff
 
 
 
